@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="center|top"
+    tools:context="com.miguelcr.a02_tictactoe.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_empty"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/cell1"
+        android:layout_toEndOf="@+id/cell1"
+        android:layout_marginLeft="18dp"
+        android:id="@+id/cell2"
+        android:onClick="selectKomorka" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_empty"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/cell2"
+        android:layout_toEndOf="@+id/cell2"
+        android:layout_marginLeft="18dp"
+        android:id="@+id/cell3"
+        android:onClick="selectKomorka"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_empty"
+        android:layout_toRightOf="@+id/cell4"
+        android:layout_toEndOf="@+id/cell4"
+        android:layout_below="@id/cell2"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/cell5"
+        android:onClick="selectKomorka"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_empty"
+        android:layout_toRightOf="@+id/cell5"
+        android:layout_toEndOf="@+id/cell5"
+        android:layout_below="@id/cell3"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/cell6"
+        android:onClick="selectKomorka"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_empty"
+        android:layout_toRightOf="@+id/cell7"
+        android:layout_toEndOf="@+id/cell7"
+        android:layout_below="@id/cell5"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/cell8"
+        android:onClick="selectKomorka"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_empty"
+        android:layout_toRightOf="@+id/cell8"
+        android:layout_toEndOf="@+id/cell8"
+        android:layout_below="@id/cell6"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/cell9"
+        android:onClick="selectKomorka"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_empty"
+        android:id="@+id/cell1"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/cell7"
+        android:layout_alignStart="@+id/cell7"
+        android:onClick="selectKomorka"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_empty"
+        android:id="@+id/cell4"
+        android:layout_alignTop="@+id/cell5"
+        android:layout_alignLeft="@+id/cell7"
+        android:layout_alignStart="@+id/cell7"
+        android:onClick="selectKomorka"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_empty"
+        android:id="@+id/cell7"
+        android:layout_alignTop="@+id/cell8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="selectKomorka"/>
+
+    <TextView
+        android:text="@string/player_1"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cell8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:id="@+id/textViewPlayer"
+        android:onClick="selectKomorka"/>
+
+</RelativeLayout>
