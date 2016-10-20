@@ -23,9 +23,15 @@ public class NewGameActivity extends AppCompatActivity {
         String name1 = player1Name.getText().toString();
         String name2 = player2Name.getText().toString();
 
-        Intent intent = new Intent(NewGameActivity.this,MainActivity.class);
-        intent.putExtra("player1",name1);
-        intent.putExtra("player2",name2);
-        startActivity(intent);
+        if(name1.isEmpty()) {
+            player1Name.setError("Write a name for player 1");
+        } else if(name2.isEmpty()) {
+            player2Name.setError("Write a name for player 2");
+        } else {
+            Intent intent = new Intent(NewGameActivity.this, MainActivity.class);
+            intent.putExtra("player1", name1);
+            intent.putExtra("player2", name2);
+            startActivity(intent);
+        }
     }
 }
