@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Take a photo"
+        android:id="@+id/options_menu_take_photo"
+        android:icon="@drawable/ic_photo_camera"
+        app:showAsAction="ifRoom"></item>
+
+    <item android:title="Logout"
+        android:id="@+id/options_menu_logout"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_exit"></item>
+</menu>

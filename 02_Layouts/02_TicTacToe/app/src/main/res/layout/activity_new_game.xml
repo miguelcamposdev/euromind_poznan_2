@@ -29,6 +29,7 @@
         android:background="@color/colorAccent"
         android:textColor="@android:color/white"
         android:text="Start game"
+        android:onClick="startNewGame"
         />
 
 </LinearLayout>

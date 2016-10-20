@@ -1,5 +1,6 @@
 package com.miguelcr.a02_tictactoe;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,12 +14,19 @@ public class MainActivity extends AppCompatActivity {
     int[] selectedCells = {0,0,0,0,0,0,0,0,0};
     TextView currentPlayerText;
     boolean exist = false;
+    String player1Name, player2Name;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Get data from Intent
+        Intent i = getIntent();
+        Bundle extras = i.getExtras();
+        player1Name = extras.getString("player1");
+        player2Name = extras.getString("player2");
 
         currentPlayerText = (TextView) findViewById(R.id.textViewPlayer);
         ivCell1 = (ImageView) findViewById(R.id.cell1);
@@ -30,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         ivCell7 = (ImageView) findViewById(R.id.cell7);
         ivCell8 = (ImageView) findViewById(R.id.cell8);
         ivCell9 = (ImageView) findViewById(R.id.cell9);
+
+        // Set the player 1 name by default
+        currentPlayerText.setText(player1Name+" turn");
     }
 
     public void selectKomorka(View view) {
@@ -139,9 +150,9 @@ public class MainActivity extends AppCompatActivity {
 
         if(exist) {
             if(isPlayerOne) {
-                currentPlayerText.setText("Player 1 wins!");
+                currentPlayerText.setText(player1Name+" wins!");
             } else {
-                currentPlayerText.setText("Player 2 wins!");
+                currentPlayerText.setText(player2Name+" wins!");
             }
         } else { // if not exist a solution
 
@@ -155,9 +166,9 @@ public class MainActivity extends AppCompatActivity {
                 // If exist == false is because we can continue playing.
                 // Exist at least one more cell with 0 value
                 if(isPlayerOne) {
-                    currentPlayerText.setText("Player 2 turn");
+                    currentPlayerText.setText(player1Name+" turn");
                 } else {
-                    currentPlayerText.setText("Player 1 turn");
+                    currentPlayerText.setText(player2Name+" turn");
                 }
             } else {
                 currentPlayerText.setText("Game over!");
