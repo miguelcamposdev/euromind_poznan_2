@@ -43,13 +43,16 @@ public class GameActivity extends AppCompatActivity {
 
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-        int maxHeight = displaymetrics.heightPixels;
-        int maxWidth = displaymetrics.widthPixels;
+        int maxHeight = displaymetrics.heightPixels - duck.getHeight();
+        int maxWidth = displaymetrics.widthPixels - duck.getWidth();
 
         int xPosition = random.nextInt(maxWidth - 0 + 1) + 0;
         int yPosition = random.nextInt(maxHeight - 0 + 1) + 0;
 
         duck.setX(xPosition);
         duck.setY(yPosition);
+
+        counter++;
+        textViewDuck.setText(counter+" ducks");
     }
 }

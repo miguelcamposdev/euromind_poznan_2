@@ -15,6 +15,7 @@
         android:layout_alignParentLeft="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         android:text="0 ducks"/>
@@ -28,12 +29,14 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:text="Nick"
+        android:textColor="@android:color/black"
         android:textAllCaps="true"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_clock"
+        android:textColor="@android:color/black"
         android:layout_toLeftOf="@+id/text_view_countdown"/>
 
     <TextView
@@ -44,6 +47,7 @@
         android:layout_alignParentTop="true"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@android:color/black"
         android:text="0s"/>
 
     <ImageView
