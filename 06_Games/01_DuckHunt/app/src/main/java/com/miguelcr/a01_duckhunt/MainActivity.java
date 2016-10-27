@@ -1,5 +1,6 @@
 package com.miguelcr.a01_duckhunt;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -13,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         appName = (TextView) findViewById(R.id.app_name);
+
+        Typeface type = Typeface.createFromAsset(getAssets(),"pixel.ttf");
+        appName.setTypeface(type);
 
     }
 }
