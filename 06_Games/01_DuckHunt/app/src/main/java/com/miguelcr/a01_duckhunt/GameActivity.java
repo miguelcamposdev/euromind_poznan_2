@@ -84,23 +84,29 @@ public class GameActivity extends AppCompatActivity {
         // Show the dialog to Restart game or Show Ranking
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
+        builder.setMessage("GAME OVER. What do you want to do?");
+
         // Add the buttons
         builder.setPositiveButton("Show Ranking", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked OK button
-                Intent i = new Intent(this, RankingUserActivity.class);
+                Intent i = new Intent(GameActivity.this, RankingUserActivity.class);
                 startActivity(i);
             }
         });
         builder.setNegativeButton("Play again", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User cancelled the dialog
-
+                counter = 0;
+                textViewDuck.setText("0 ducks");
+                gameOver = false;
+                startCountDownTimer();
             }
         });
 
         // Create the AlertDialog
         AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     public void duckClicked(View view) {

@@ -39,15 +39,21 @@ public class MainActivity extends AppCompatActivity {
                     .where(UserDao.Properties.Nick.eq(nick))
                     .unique();
 
+            Intent i = new Intent(this,GameActivity.class);
+
             if(u==null) {
                 u = new User();
                 u.setNick(nick);
-                userManager.insert(u);
+                u.setScore(0);
+                long newId = userManager.insert(u);
+
+                i.putExtra("userId",newId);
+                i.putExtra("nick",nick);
+            } else {
+                i.putExtra("userId",u.getId());
+                i.putExtra("nick",u.getNick());
             }
 
-            Intent i = new Intent(this,GameActivity.class);
-            i.putExtra("userId",u.getId());
-            i.putExtra("nick",u.getNick());
             startActivity(i);
         }
 
