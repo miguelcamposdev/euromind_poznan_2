@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         if (nick.isEmpty()) {
             editTextNick.setError("Write a nick name");
         } else {
-
+            new LoginTask().execute(nick);
         }
 
     }
