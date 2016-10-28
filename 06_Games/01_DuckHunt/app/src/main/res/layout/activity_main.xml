@@ -31,4 +31,11 @@
         android:layout_height="wrap_content"
         android:text="Start new game"
         android:onClick="startGame"/>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Ranking"
+        android:onClick="showRanking"/>
 </RelativeLayout>

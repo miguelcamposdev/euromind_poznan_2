@@ -57,6 +57,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
 
+    }
 
+    public void showRanking(View view) {
+        Intent i = new Intent(this, RankingUserActivity.class);
+        startActivity(i);
     }
 }
